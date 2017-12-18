@@ -1,5 +1,7 @@
 import { createStore } from 'redux';
 
+// Actions generators - functions that return action objects 
+
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
   type: 'INCREMENT',
   incrementBy 
@@ -7,7 +9,7 @@ const incrementCount = ({ incrementBy = 1 } = {}) => ({
 
 const decrementCount = ({ decrementBy = 1 } = {}) => ({
   type: 'DECREMENT',
-  decrementBy 
+  decrementBy  
 });
 
 const reset = ({ reset = 0 } = {}) => ({
@@ -64,3 +66,6 @@ store.dispatch(reset({ count: 0 }));
 store.dispatch(set({ count: 101 }));
 
 store.dispatch(set());
+
+// Actions - than an object that gets sent to the store 
+
